@@ -12,7 +12,7 @@
  */
 void _div(stack_t **stack, unsigned int line_cnt)
 {
-	int result;
+	int res;
 
 	if (!stack || !*stack || !((*stack)->next))
 	{
@@ -27,7 +27,7 @@ void _div(stack_t **stack, unsigned int line_cnt)
 		return;
 	}
 
-	result = ((*stack)->next->n) / ((*stack)->n);
-	pop(stack, line_cnt);/*Top node*/
-	(*stack)->n = result;
+	res = ((*stack)->next->n) / ((*stack)->n);
+	pop(stack, line_cnt);/*node*/
+	(*stack)->n = res;
 }
